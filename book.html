@@ -3,6 +3,17 @@
 	<head>
 		<title>Fusion Factory</title>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<script Language="Javascript">
+		function modifyIframe() {
+			var iframe = document.getElementsByTagName('iframe')[0];
+			content = (iframe.contentDocument || iframe.contentWindow);
+			if (content.document)content=content.document;
+			var text =  content.getElementsByClassName('ss-form-desc')[0];
+			text.className = 'ss-form-desc';
+			text.style.textAlign = 'justify';
+			text.innerHTML += '<br/><br/>For non-booking related enquiries please visit <a href="#" onclick="parent.window.location=\'http://fusionfactoryireland.com/contact.html\'">contact us.</a><br/><br/>';
+		}
+		</script>
 	</head>
 	<body>
 	<div id="entire">
@@ -46,14 +57,15 @@
 <!-- stuff goes here -->
 <div>
 <p>
-	<img id="mainimage" src="main.jpg"/>
-	Fusion Factory is an educational charity founded by a group of science communicators which uses uniquely designed workshops and approach to make science learning an engaging, creative, accessible and enjoyable activity. We travel to schools present a real and functional 21st century educational model with the emphasis on accommodating the learner within scientific concepts, utilising their innate creativity as a means to learn and enrich the educational experience. We succeed in opening a portal through which learners are empowered to play with the idea of further study and career options within scientific fields. We are approachable, knowledgeable and down-to-earth communicators with a natural flair for identifying students' problem areas within science and inventing and delivering ingenious solutions, making them easier and fun to grasp.
+	<iframe onload="modifyIframe()" src="https://docs.google.com/spreadsheet/embeddedform?formkey=dE01ZzhkajlKRlVReXZGenBZODVnNEE6MQ" width="760" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	</p>
 
-	</p></div>
+
+</div>
 
 <div id="icons">
 	<ul>
-		<li><a href="http://twitter.com/fusionfactoryie"><img src="twitter.png"></img></a></li>
+		<li><a href="http://twitter.com"><img src="twitter.png"></img></a></li>
 		<li><a href="http://www.facebook.com/pages/Fusion-Factory/354212024592314?created"><img src="facebook.png"></img></a></li>
 	</ul>
 </div>

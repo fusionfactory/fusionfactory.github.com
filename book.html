@@ -6,6 +6,13 @@
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<script Language="Javascript">
 		function modifyIframe() {
+			
+		    var myIFrame = document.getElementById('if');
+
+		    // Apply the property "contentWindow" to myIFrame object
+		    // In this way we get the iframe content
+		    var content = myIFrame.contentWindow.document.body.innerHTML;
+			alert(content);
 			var iframe = document.getElementsByTagName('iframe')[0];
 			content = (iframe.contentDocument || iframe.contentWindow);
 			if (content.document)content=content.document;
@@ -14,6 +21,16 @@
 			text.style.textAlign = 'justify';
 			text.innerHTML += '<br/><br/>For non-booking related enquiries please visit <a href="#" onclick="parent.window.location=\'http://fusionfactoryireland.com/contact.html\'">contact us.</a><br/><br/>';
 		}
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27300220-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
 		</script>
 	</head>
 	<body>
@@ -58,7 +75,7 @@
 <!-- stuff goes here -->
 <div>
 <p>
-	<iframe onload="modifyIframe()" src="https://docs.google.com/spreadsheet/embeddedform?formkey=dE01ZzhkajlKRlVReXZGenBZODVnNEE6MQ" width="760" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	<iframe id="if" onload="modifyIframe()" src="https://docs.google.com/spreadsheet/embeddedform?formkey=dE01ZzhkajlKRlVReXZGenBZODVnNEE6MQ" width="760" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 	</p>
 
 

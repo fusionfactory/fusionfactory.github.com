@@ -12,7 +12,6 @@
 		    // Apply the property "contentWindow" to myIFrame object
 		    // In this way we get the iframe content
 		    var content = myIFrame.contentWindow.document.body.innerHTML;
-			alert(content);
 			var iframe = document.getElementsByTagName('iframe')[0];
 			content = (iframe.contentDocument || iframe.contentWindow);
 			if (content.document)content=content.document;

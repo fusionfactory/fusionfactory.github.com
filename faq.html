@@ -59,30 +59,34 @@
 <div id ="left">
 <!-- stuff goes here -->
 <div>
-<p>
+	<script language="Javascript">
+	function toggle(n) {
+		var a = document.getElementById(n);
+		if (a.style.display == 'block') {
+			a.style.display = 'none';
+		} else {
+			a.style.display = 'block';
+		}
+	}
+	</script>
+<p>	
 	1.
-	<a onclick="document.getElementById('a1').style.display='block';" name="q1" href="#q1">What is the Administration Cost?</a>
-	<span id="a1" style="display:none;color:orange;">The administration cost will allow us to tailor your Fusion Factory event to suit your school's time table. We will create an event that accommodates your class sizes and wants and needs regarding the curriculum.
-</span>
-	
-	<br/><br/>
-	2.
-	<a onclick="document.getElementById('a2').style.display='block';" name="q2" href="#q2">Will Fusion Factory visit my area?</a>
+	<a onclick="toggle('a2');" name="q2" href="#q2">Will Fusion Factory visit my area?</a>
 	<span id="a2" style="display:none;color:orange;">At present Fusion Factory is operating in the Greater Dublin area. We will be expanding and traveling further afield in the coming months!</span>
 
 	<br/><br/>
-	3.
-	<a onclick="document.getElementById('a3').style.display='block';" name="q3" href="#q3">How many students can sit a workshop at a time?</a>
+	2.
+	<a onclick="toggle('a3');" name="q3" href="#q3">How many students can sit a workshop at a time?</a>
 	<span id="a3" style="display:none;color:orange;">We can create the workshops to suit a class as small as 10, all the way up to over 100 students.</span>
 
 	<br/><br/>
-	4.
-	<a onclick="document.getElementById('a4').style.display='block';" name="q4" href="#q4">What other services does Fusion Factory offer?</a>
+	3.
+	<a onclick="toggle('a4');" name="q4" href="#q4">What other services does Fusion Factory offer?</a>
 	<span id="a4" style="display:none;color:orange;">At present Fusion Factory delivers tailor-made workshops to second level schools. We hope, in the near future, to offer an advice on science (careers), a grinds workshop series and science in the park events.</span>
 
 	<br/><br/>
-	5.
-	<a onclick="document.getElementById('a5').style.display='block';" name="q5" href="#q5">How can I pay?</a>
+	4.
+	<a onclick="toggle('a5');" name="q5" href="#q5">How can I pay?</a>
 	<span id="a5" style="display:none;color:orange;">You can pay by cheque once you have organised your event with us.</span>
 
 	</p>
